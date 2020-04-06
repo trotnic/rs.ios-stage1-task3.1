@@ -33,7 +33,7 @@
     self.colorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width*0.3, 40)];
     [self.colorLabel setText:@"Color"];
     self.resultColor = [[UIView alloc] initWithFrame:CGRectMake(self.colorLabel.frame.size.width, 0, self.view.bounds.size.width*0.9 - self.colorLabel.frame.size.width, 40)];
-    [self.resultColor setBackgroundColor:UIColor.grayColor];
+    [self.resultColor setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:self.colorLabel];
     [self.view addSubview:self.resultColor];
     
@@ -49,7 +49,6 @@
 - (void)doStuff:(NSNotification *)notification {
     
     NSDictionary *result = notification.userInfo;
-//    CGFloat value = [result[@"result"] floatValue];
     [self.colorRGB setValue:result[@"result"] forKey:result[@"color"]];
     NSLog(@"%@", self.colorRGB);
     
@@ -73,14 +72,11 @@
     [self.colorLabel setText:@"Color"];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"beganPaint" object:self];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
 }
-*/
 
 @end

@@ -26,7 +26,6 @@
     self = [super init];
     if (self) {
         [self setName:name];
-        [self setResult:@"12"];
         [self setTfa:tfa];
         [self setCla:cla];
     }
@@ -36,21 +35,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doSomeThing) name:@"BeginCalcs" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(doSomeThing) name:@"beganCalcs" object:nil];
     
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width*0.2, 40)];
     [self.label setText:self.name];
-    [self.label setTextColor:UIColor.blackColor];
-    [self.label setBackgroundColor:UIColor.clearColor];
+    [self.label setTextColor:[UIColor blackColor]];
+    [self.label setBackgroundColor:[UIColor clearColor]];
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(self.label.frame.size.width, 0, self.view.bounds.size.width*0.9 - self.label.frame.size.width, 40)];
     [self.textField setPlaceholder:@"0..255"];
-    [self.textField setBackgroundColor:UIColor.clearColor];
+    [self.textField setBackgroundColor:[UIColor whiteColor]];
     [self.textField setBorderStyle:UITextBorderStyleRoundedRect];
     [self.textField setDelegate:self];
-    
-//    [textField setText:@"LOLKEKCHEBUREK"];
     [self.view addSubview:self.textField];
     [self.view addSubview:self.label];
     
@@ -76,6 +72,12 @@
 //    return false;
 //}
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
+}
+
 - (void)doSomeThing {
     NSString *result;
     
@@ -93,20 +95,8 @@
     [self.textField setText:@""];
 }
 
-
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"beganPaint" object:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
