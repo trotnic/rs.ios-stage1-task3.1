@@ -16,6 +16,8 @@
 		25787FA62436460F0066701D /* Polynomial.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 25787FA52436460E0066701D /* Polynomial.pdf */; };
 		25787FAB243665140066701D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25787FA8243665140066701D /* ViewController.m */; };
 		25787FAC243665140066701D /* Task 3 - Great mixer.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 25787FA9243665140066701D /* Task 3 - Great mixer.pdf */; };
+		8647E9C32436A7D700FC5548 /* ColorPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647E9C22436A7D700FC5548 /* ColorPickViewController.m */; };
+		8647E9C624379B1D00FC5548 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8647E9C524379B1D00FC5548 /* ResultViewController.m */; };
 		E3821557225B533B00E3B12B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3821556225B533B00E3B12B /* AppDelegate.m */; };
 		E382155F225B533E00E3B12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E382155E225B533E00E3B12B /* Assets.xcassets */; };
 		E3821562225B533E00E3B12B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3821560225B533E00E3B12B /* LaunchScreen.storyboard */; };
@@ -52,6 +54,10 @@
 		25787FA8243665140066701D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		25787FA9243665140066701D /* Task 3 - Great mixer.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Task 3 - Great mixer.pdf"; sourceTree = "<group>"; };
 		25787FAA243665140066701D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8647E9C12436A7D700FC5548 /* ColorPickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPickViewController.h; sourceTree = "<group>"; };
+		8647E9C22436A7D700FC5548 /* ColorPickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPickViewController.m; sourceTree = "<group>"; };
+		8647E9C424379B1D00FC5548 /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		8647E9C524379B1D00FC5548 /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		E3821552225B533B00E3B12B /* RSSchool_T3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3821555225B533B00E3B12B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3821556225B533B00E3B12B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,8 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				25787FA9243665140066701D /* Task 3 - Great mixer.pdf */,
+				8647E9C424379B1D00FC5548 /* ResultViewController.h */,
+				8647E9C524379B1D00FC5548 /* ResultViewController.m */,
 				25787FAA243665140066701D /* ViewController.h */,
 				25787FA8243665140066701D /* ViewController.m */,
+				8647E9C12436A7D700FC5548 /* ColorPickViewController.h */,
+				8647E9C22436A7D700FC5548 /* ColorPickViewController.m */,
 			);
 			path = "3 ";
 			sourceTree = "<group>";
@@ -308,8 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3821565225B533E00E3B12B /* main.m in Sources */,
+				8647E9C624379B1D00FC5548 /* ResultViewController.m in Sources */,
 				25787F8E243643770066701D /* Combinator.m in Sources */,
 				25787F892436434A0066701D /* PolynomialConverter.m in Sources */,
+				8647E9C32436A7D700FC5548 /* ColorPickViewController.m in Sources */,
 				E3821557225B533B00E3B12B /* AppDelegate.m in Sources */,
 				25787FAB243665140066701D /* ViewController.m in Sources */,
 			);

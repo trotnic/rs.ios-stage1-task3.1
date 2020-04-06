@@ -4,7 +4,7 @@
 
 @interface RS_Task3_UICheckerUITests : XCTestCase
 
-@property (nonatomic) XCUIApplication *app;
+@property (nonatomic, retain) XCUIApplication *app;
 
 @end
 
