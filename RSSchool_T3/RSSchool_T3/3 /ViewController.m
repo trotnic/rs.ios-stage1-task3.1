@@ -19,7 +19,7 @@ const int FIELD_WIDTH = 100;
     ResultViewController *rvc = [ResultViewController new];
     [self addChildViewController:rvc];
     [self.view addSubview:rvc.view];
-    [rvc.view setFrame:CGRectMake(20, self.view.bounds.size.height / 4, self.view.bounds.size.width * 0.9, FIELD_HEIGHT)];
+    [rvc.view setFrame:CGRectMake(20, self.view.bounds.size.height*0.15, self.view.bounds.size.width * 0.9, FIELD_HEIGHT)];
     [rvc didMoveToParentViewController:self];
     NSArray<NSString *> *fields = [[NSArray alloc] initWithObjects:@"RED", @"GREEN", @"BLUE", nil];
     NSArray<NSString *> *idTextFields = [[NSArray alloc] initWithObjects:@"textFieldRed", @"textFieldGreen", @"textFieldBlue", nil];
@@ -33,7 +33,7 @@ const int FIELD_WIDTH = 100;
         [vc.view setTag:idx];
         [self addChildViewController:vc];
         [self.view addSubview:vc.view];
-        [vc.view setFrame:CGRectMake(20, self.view.bounds.size.height / 3 + FIELD_HEIGHT*2*idx, self.view.bounds.size.width * 0.9, FIELD_HEIGHT)];
+        [vc.view setFrame:CGRectMake(20, self.view.bounds.size.height*0.26 + FIELD_HEIGHT*2*idx, self.view.bounds.size.width * 0.9, FIELD_HEIGHT)];
         [vc didMoveToParentViewController:self];
         
     }];
